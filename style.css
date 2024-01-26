@@ -17,6 +17,9 @@ body {
    padding: 6rem;
    margin: auto 2rem;
 }
+.container .text {
+    max-width: 100%;
+}
 .container .text h1 {
     font-weight: 800;
     font-size: 58px;
@@ -38,6 +41,7 @@ body {
     grid-template-rows: repeat(auto-fill , minmax(50px, 1fr));
     grid-gap: 10px;
     height: 100px;
+    max-width: 100%;
 }
 .rates .one, 
 .rates .two, 
@@ -107,4 +111,46 @@ body {
 .buyers .descrep p {
     color: white;
     line-height: 1.5;
+}
+@media (max-width: 767px) {
+    .container {
+        padding: 15px 0;
+        margin: 50px;
+        max-width: 100%;
+    }
+    .group-1 {
+        flex-direction: column;
+    }
+    .group-1 .text {
+        text-align: center;
+    }
+    .group-1 .text h1 {
+        font-size: 50px;
+        width: 426px;
+    }
+    .group-1 .text p {
+        font-size: 21px;
+        width: 426px;
+        text-align: center;
+    }
+    .group-1 .rates {
+        margin-top: 50px;
+        height: 228px;
+        text-align: center;
+    }
+    .group-1 .rates .one,
+    .group-1 .rates .three {
+        position: relative;
+        right: 0;
+    }
+    .group-1 .rates .one,
+    .group-1 .rates .two,
+    .group-1 .rates .three {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 325px;
+        padding: 15px;
+        margin: 0 auto;
+    }
 }
